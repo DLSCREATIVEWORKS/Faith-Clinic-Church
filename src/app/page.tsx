@@ -128,7 +128,7 @@ export default function HomePage() {
             <p className="eyebrow">The Word for your week</p>
             <h2>Let your faith keep growing.</h2>
             <p>
-              Can&rsquo;t be in the building? Be in the service. Sunday worship streams live at 11:00 AM Central, and past messages stay online so you can hear them again.
+              Can&rsquo;t be in the building? Be in the service. Sunday worship streams live at 11:00 AM Central, and past messages stay online so you can hear them again. You can also hear Dr. Simpson on the {site.radio}.
             </p>
             <div className="cta" style={{ marginTop: 6 }}>
               <a className="btn gold" href={site.youtube}>Watch messages</a>
@@ -170,10 +170,10 @@ export default function HomePage() {
               <h3>Lord, Teach Us to Pray</h3>
               <p>Prayer as a living conversation with God.</p>
             </a>
-            <a className="book reveal" href={site.books}>
-              <div className="cover text"><b>Transformation</b><span>Change Begins Within</span></div>
+            <a className="book reveal" href={site.transformation}>
+              <div className="cover"><img src="/images/cover-transformation.jpg" alt="Book cover: Transformation, Change Begins Within" /></div>
               <h3>Transformation</h3>
-              <p>Spirit-led growth into who God created you to be.</p>
+              <p>Change begins within. The journey to your best self.</p>
             </a>
             <Link className="book reveal" href="/books/">
               <div className="cover"><img src="/images/cover-living-in-agreement.jpg" alt="Book cover: Living in Agreement" /></div>

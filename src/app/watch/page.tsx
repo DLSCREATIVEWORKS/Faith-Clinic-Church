@@ -18,7 +18,7 @@ export default function Watch() {
           <div className="sec-head reveal">
             <h2>Worship with us. Wherever you are.</h2>
           </div>
-          <div className="cards">
+          <div className="cards two">
             <div className="card reveal">
               <p className="when">Join the gathering</p>
               <h3>Sunday livestream</h3>
@@ -30,6 +30,11 @@ export default function Watch() {
               <h3>Previous messages</h3>
               <p>Teaching from Dr. Lee A. Simpson and previous services stay on the channel, so you can browse them all week.</p>
               <a href={site.youtube}>Browse messages</a>
+            </div>
+            <div className="card reveal">
+              <p className="when">On the radio · 88.3 FM</p>
+              <h3>Kingdom Keys Network</h3>
+              <p>Hear Dr. Lee A. Simpson on the Kingdom Keys Network, broadcasting in Amarillo, Texas, on 88.3 FM.</p>
             </div>
             <div className="card reveal">
               <p className="when">Connect in person</p>

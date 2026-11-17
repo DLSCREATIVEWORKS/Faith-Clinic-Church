@@ -44,6 +44,7 @@ export default function Footer() {
           <p>
             <a href={site.youtube}>YouTube</a> · <a href={site.facebook}>Facebook</a>
           </p>
+          <p>Radio: Kingdom Keys Network, 88.3 FM</p>
         </div>
       </div>
       <div className="wrap legal">© {new Date().getFullYear()} Faith Clinic Church. All rights reserved.</div>

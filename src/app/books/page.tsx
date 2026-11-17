@@ -35,11 +35,11 @@ export default function Books() {
             <h2>More from Dr. Simpson</h2>
           </div>
           <div className="shelf">
-            <a className="book reveal" href={site.books}>
-              <div className="cover text"><b>Transformation</b><span>Change Begins Within</span></div>
+            <a className="book reveal" href={site.transformation}>
+              <div className="cover"><img src="/images/cover-transformation.jpg" alt="Book cover: Transformation, Change Begins Within" /></div>
               <p className="tag">Identity · Growth · Renewal</p>
               <h3>Transformation: Change Begins Within</h3>
-              <p>A guide to Spirit-led growth into the person God created you to be.</p>
+              <p>The journey to your best self. Spirit-led growth into the person God created you to be. Available on Amazon.</p>
             </a>
             <div className="book reveal">
               <div className="cover"><img src="/images/cover-living-in-agreement.jpg" alt="Book cover: Living in Agreement" /></div>
