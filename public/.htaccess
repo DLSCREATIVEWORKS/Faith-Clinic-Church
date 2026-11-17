@@ -1,0 +1,14 @@
+# Faith Clinic Church static site
+DirectoryIndex index.html
+ErrorDocument 404 /404.html
+Options -Indexes
+
+# Long cache for versioned build files and images
+<IfModule mod_expires.c>
+  ExpiresActive On
+  ExpiresByType text/html "access plus 0 seconds"
+  ExpiresByType image/jpeg "access plus 30 days"
+</IfModule>
+<FilesMatch "^_next/static/">
+  Header set Cache-Control "public, max-age=31536000, immutable"
+</FilesMatch>
