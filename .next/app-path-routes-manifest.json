@@ -1,0 +1,9 @@
+{
+  "/(frontend)/page": "/",
+  "/(payload)/admin/[[...segments]]/page": "/admin/[[...segments]]",
+  "/(payload)/api/[...slug]/route": "/api/[...slug]",
+  "/(payload)/api/graphql-playground/route": "/api/graphql-playground",
+  "/(payload)/api/graphql/route": "/api/graphql",
+  "/_global-error/page": "/_global-error",
+  "/_not-found/page": "/_not-found"
+}
