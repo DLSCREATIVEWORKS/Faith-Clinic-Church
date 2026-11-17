@@ -1,18 +1,13 @@
 import { withPayload } from '@payloadcms/next/withPayload'
-import type { NextConfig } from 'next'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
-const __filename = fileURLToPath(import.meta.url)
-const dirname = path.dirname(__filename)
+const dirname = path.dirname(fileURLToPath(import.meta.url))
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   images: {
-    localPatterns: [
-      {
-        pathname: '/api/media/file/**',
-      },
-    ],
+    localPatterns: [{ pathname: '/api/media/file/**' }],
   },
   webpack: (webpackConfig) => {
     webpackConfig.resolve.extensionAlias = {
@@ -20,7 +15,6 @@ const nextConfig: NextConfig = {
       '.js': ['.ts', '.tsx', '.js', '.jsx'],
       '.mjs': ['.mts', '.mjs'],
     }
-
     return webpackConfig
   },
   turbopack: {
