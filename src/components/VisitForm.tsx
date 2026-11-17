@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 /* Plan Your Visit form. Submits to the church's MailerLite form
    "FCC | Website Form | Plan Your Visit", which adds the visitor to the
@@ -12,6 +12,10 @@ type State = { kind: 'idle' | 'busy' | 'ok' | 'error'; text: string }
 
 export default function VisitForm() {
   const [state, setState] = useState<State>({ kind: 'idle', text: '' })
+  const startedAt = useRef(Date.now())
+  useEffect(() => {
+    startedAt.current = Date.now()
+  }, [])
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault()
@@ -20,6 +24,13 @@ export default function VisitForm() {
     const get = (k: string) => String(data.get(k) || '').trim()
     const email = get('email')
     const name = get('name')
+    // Bot trap: people never see or fill the "website" field, and nobody
+    // fills the whole form in under three seconds.
+    if (get('website') || Date.now() - startedAt.current < 3000) {
+      form.reset()
+      setState({ kind: 'ok', text: "Thank you! We can't wait to meet you." })
+      return
+    }
     if (!name) {
       setState({ kind: 'error', text: 'Please tell us your name so we can welcome you.' })
       return
@@ -87,6 +98,10 @@ export default function VisitForm() {
         <div className="field">
           <label htmlFor="vf-children">Bringing children? <span>(ages, optional)</span></label>
           <input id="vf-children" name="children" type="text" placeholder="e.g. 4 and 9" />
+        </div>
+        <div className="hp" aria-hidden="true">
+          <label htmlFor="vf-website">Leave this empty</label>
+          <input id="vf-website" name="website" type="text" tabIndex={-1} autoComplete="off" />
         </div>
         <button className="btn gold" type="submit" disabled={state.kind === 'busy'}>
           {state.kind === 'busy' ? 'Sending…' : 'Plan my visit'}

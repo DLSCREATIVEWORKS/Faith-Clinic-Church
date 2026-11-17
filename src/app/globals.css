@@ -165,6 +165,7 @@ input::placeholder{color:#B4C0D9}
 .msg{font-weight:600;color:var(--gold-bright);min-height:1.6em}
 .msg.error{color:#FFB4A8}
 .narrow{max-width:820px}
+.hp{position:absolute;left:-9999px;width:1px;height:1px;overflow:hidden}
 .visit-form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;margin-top:22px}
 .visit-form .field{display:grid;gap:6px}
 .visit-form label{font-weight:600;color:#fff;font-size:.95rem}
