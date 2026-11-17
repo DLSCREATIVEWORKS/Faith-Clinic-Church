@@ -1,7 +1,7 @@
 import { NextStep, PageHero, Verse } from '@/components/Blocks'
-import { site } from '@/lib'
+import { site, pageMeta } from '@/lib'
 
-export const metadata = { title: 'Give' }
+export const metadata = pageMeta('Give', 'Give to Faith Clinic Church in Amarillo, Texas, by PayPal, Cash App, Venmo, or Zelle. Plant seeds that help hope reach others.', '/give/')
 
 export default function Give() {
   return (

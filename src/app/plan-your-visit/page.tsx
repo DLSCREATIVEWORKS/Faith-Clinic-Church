@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { NextStep, PageHero } from '@/components/Blocks'
-import { site } from '@/lib'
+import { site, pageMeta } from '@/lib'
 import VisitForm from '@/components/VisitForm'
 
-export const metadata = { title: 'Plan Your Visit' }
+export const metadata = pageMeta('Plan Your Visit', "Plan your first visit to Faith Clinic Church in Amarillo, TX. Sunday worship 11:00 AM, Wednesday Bible Study 7:00 PM, children's ministry, Spanish translation, and easy parking.", '/plan-your-visit/')
 
 export default function Visit() {
   return (

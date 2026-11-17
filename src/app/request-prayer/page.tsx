@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { PageHero, Verse } from '@/components/Blocks'
-import { site } from '@/lib'
+import { site, pageMeta } from '@/lib'
 
-export const metadata = { title: 'Request Prayer' }
+export const metadata = pageMeta('Request Prayer', "Send a prayer request to Faith Clinic Church in Amarillo, Texas. You don't have to carry it alone. Bring your needs before the Lord with us.", '/request-prayer/')
 
 const mailto = `mailto:${site.email}?subject=${encodeURIComponent('Prayer Request for Faith Clinic Church')}&body=${encodeURIComponent('Name:\n\nPrayer request:\n')}`
 

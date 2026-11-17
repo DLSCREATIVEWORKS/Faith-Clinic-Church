@@ -24,3 +24,26 @@ export const nav = [
   { href: 'https://newbelievers.faithclinicministries.org', label: 'New Believers' },
   { href: '/plan-your-visit/', label: 'Plan Your Visit' },
 ]
+
+/* The one address search engines should treat as the site's home.
+   faithclinicministries.org and http:// both forward here (see public/.htaccess). */
+export const siteUrl = 'https://www.faithclinicministries.org'
+
+/* Title, description, canonical address and social-share tags for one page. */
+export function pageMeta(title: string, description: string, path: string) {
+  return {
+    title,
+    description,
+    alternates: { canonical: path },
+    openGraph: {
+      type: 'website',
+      siteName: 'Faith Clinic Church',
+      locale: 'en_US',
+      title: `${title} | Faith Clinic Church`,
+      description,
+      url: path,
+      images: [{ url: '/images/share.jpg', width: 1200, height: 630, alt: 'Faith Clinic Church in Amarillo, Texas' }],
+    },
+    twitter: { card: 'summary_large_image', title: `${title} | Faith Clinic Church`, description, images: ['/images/share.jpg'] },
+  }
+}

@@ -1,9 +1,9 @@
 import Link from 'next/link'
 import { NextStep, PageHero } from '@/components/Blocks'
 import Countdown from '@/components/Countdown'
-import { site } from '@/lib'
+import { site, pageMeta } from '@/lib'
 
-export const metadata = { title: 'Gatherings' }
+export const metadata = pageMeta('Gatherings', 'Sunday worship at 11:00 AM and Wednesday Night Bible Study at 7:00 PM at Faith Clinic Church, 2000 North Polk Street, Amarillo, Texas. Family worship the first Sunday of each month.', '/gatherings/')
 
 export default function Gatherings() {
   return (

@@ -1,7 +1,8 @@
+import { pageMeta } from '@/lib'
 import Link from 'next/link'
 import { NextStep, PageHero } from '@/components/Blocks'
 
-export const metadata = { title: 'Ministries' }
+export const metadata = pageMeta('Ministries', 'Ministries at Faith Clinic Church in Amarillo, TX: KingdomSpark for children, Young Kingdom Warriors, Wednesday Night Bible Study, and prayer and encouragement.', '/ministries/')
 
 export default function Ministries() {
   return (

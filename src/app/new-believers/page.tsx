@@ -1,7 +1,7 @@
 import { NextStep, PageHero } from '@/components/Blocks'
-import { site } from '@/lib'
+import { site, pageMeta } from '@/lib'
 
-export const metadata = { title: 'Free Book for New Believers' }
+export const metadata = pageMeta('Free Book for New Believers', 'Free ebook from Dr. Lee A. Simpson: I Gave My Life to Jesus. Now What? Plain answers on prayer, reading the Bible, and your first steps as a new believer.', '/new-believers/')
 
 export default function NewBelievers() {
   return (

@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { NextStep, PageHero, Verse } from '@/components/Blocks'
-import { site } from '@/lib'
+import { site, pageMeta } from '@/lib'
 
-export const metadata = { title: 'Books by Dr. Lee A. Simpson' }
+export const metadata = pageMeta('Books by Dr. Lee A. Simpson', 'Books by Dr. Lee A. Simpson, pastor of Faith Clinic Church: Lord, Teach Us to Pray; Transformation: Change Begins Within; and a free book for new believers.', '/books/')
 
 export default function Books() {
   return (

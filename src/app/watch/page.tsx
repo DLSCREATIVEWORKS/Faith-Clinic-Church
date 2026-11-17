@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { NextStep, PageHero, Verse } from '@/components/Blocks'
-import { site } from '@/lib'
+import { site, pageMeta } from '@/lib'
 
-export const metadata = { title: 'Watch & Grow' }
+export const metadata = pageMeta('Watch & Grow', 'Watch Faith Clinic Church services live on Sundays at 11:00 AM Central, catch previous messages from Dr. Lee A. Simpson, and listen on Kingdom Keys Network, 88.3 FM in Amarillo.', '/watch/')
 
 export default function Watch() {
   return (

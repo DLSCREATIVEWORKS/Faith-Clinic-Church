@@ -1,6 +1,7 @@
+import { pageMeta } from '@/lib'
 import { NextStep, PageHero } from '@/components/Blocks'
 
-export const metadata = { title: 'Our Story' }
+export const metadata = pageMeta('Our Story', 'Faith Clinic Church in Amarillo, Texas, led by Dr. Lee A. Simpson and Pastor Pat Simpson. Restoring lives and growing in Christ through biblical teaching, prayer, and faith.', '/about/')
 
 export default function About() {
   return (
