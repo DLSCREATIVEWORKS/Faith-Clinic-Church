@@ -6,7 +6,7 @@ export default function Footer() {
     <footer>
       <div className="wrap foot">
         <div>
-          <p className="foot-brand">Faith Clinic Church</p>
+          <img className="foot-logo" src="/images/logo-full.webp" alt="Faith Clinic Christian Center Church" width="240" height="151" />
           <p>Restoring lives through Christ&rsquo;s power. Growing together in faith, purpose, and love.</p>
           <p>
             {site.address}

@@ -1,5 +1,5 @@
 import { NextStep, PageHero } from '@/components/Blocks'
-import SignupForm from '@/components/SignupForm'
+import { site } from '@/lib'
 
 export const metadata = { title: 'Free Book for New Believers' }
 
@@ -19,7 +19,9 @@ export default function NewBelievers() {
             <p className="eyebrow">Get your free ebook</p>
             <h2>You made the decision. Here is what to do next.</h2>
             <p>Tell us where to send it and the book is yours, free. Read it on your phone, tablet, computer, or Kindle.</p>
-            <SignupForm />
+            <div className="cta">
+              <a className="btn gold" href={site.newBelievers}>Get my free book</a>
+            </div>
             <p className="small-note">We will email the book to you. No cost, and you can unsubscribe any time.</p>
           </div>
         </div>

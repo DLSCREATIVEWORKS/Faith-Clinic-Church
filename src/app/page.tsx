@@ -1,7 +1,6 @@
 import Link from 'next/link'
 import { NextStep, Verse } from '@/components/Blocks'
 import Countdown from '@/components/Countdown'
-import SignupForm from '@/components/SignupForm'
 import { site } from '@/lib'
 
 export default function HomePage() {
@@ -150,10 +149,9 @@ export default function HomePage() {
             <p>
               Dr. Simpson wrote this guide to answer the questions every new believer has. Tell us where to send it and it&rsquo;s yours, free.
             </p>
-            <SignupForm />
-            <p className="small-note">
-              <Link href="/new-believers/" style={{ color: '#fff' }}>More about the book</Link>
-            </p>
+            <div className="cta">
+              <a className="btn gold" href={site.newBelievers}>Get my free book</a>
+            </div>
           </div>
         </div>
       </section>
@@ -180,11 +178,11 @@ export default function HomePage() {
               <h3>Living in Agreement</h3>
               <p>Coming soon. The power of Amen.</p>
             </Link>
-            <Link className="book reveal" href="/new-believers/">
+            <a className="book reveal" href={site.newBelievers}>
               <div className="cover"><img src="/images/cover-new-believers.jpg" alt="Book cover: I Gave My Life to Jesus. Now What?" /></div>
               <h3>I Gave My Life to Jesus. Now What?</h3>
               <p>Free guide for new believers.</p>
-            </Link>
+            </a>
           </div>
           <div className="cta" style={{ justifyContent: 'center' }}>
             <Link className="btn line" href="/books/">See all books</Link>

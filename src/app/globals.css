@@ -50,6 +50,9 @@ ul{margin:0;padding:0;list-style:none}
 .top .wrap{display:flex;align-items:center;justify-content:space-between;gap:10px 24px;min-height:70px;flex-wrap:wrap;padding-top:10px;padding-bottom:10px}
 .brand{display:flex;align-items:center;gap:12px;color:#fff;text-decoration:none;font-family:var(--display);font-weight:500;font-size:1.45rem}
 .brand svg{color:var(--gold-bright);flex:none}
+.brand-mark{height:48px;width:auto;flex:none;filter:drop-shadow(0 2px 6px rgba(0,0,0,.35));transition:transform .4s ease}
+.brand:hover .brand-mark{transform:rotate(-6deg) scale(1.06)}
+.foot-logo{width:240px;max-width:100%;height:auto;margin-bottom:14px}
 .top nav{display:flex;gap:6px 22px;flex-wrap:wrap;align-items:center}
 .top nav a:not(.btn){color:#E4EAF5;text-decoration:none;font-size:.98rem;padding:6px 0;position:relative}
 .top nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold-bright);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
@@ -160,6 +163,16 @@ form.signup label{position:absolute;left:-9999px}
 input{font:inherit;padding:14px 16px;border-radius:var(--r);border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#fff;min-width:0}
 input::placeholder{color:#B4C0D9}
 .msg{font-weight:600;color:var(--gold-bright);min-height:1.6em}
+.msg.error{color:#FFB4A8}
+.narrow{max-width:820px}
+.visit-form{display:grid;grid-template-columns:1fr 1fr;gap:16px 18px;margin-top:22px}
+.visit-form .field{display:grid;gap:6px}
+.visit-form label{font-weight:600;color:#fff;font-size:.95rem}
+.visit-form label span{font-weight:400;color:#B4C0D9}
+.visit-form .btn{grid-column:1/-1;justify-self:start;margin-top:6px}
+select{font:inherit;padding:14px 16px;border-radius:var(--r);border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.08);color:#fff;min-width:0}
+select option{color:#1F1F1F}
+input:focus-visible,select:focus-visible{outline:2px solid var(--gold-bright);outline-offset:2px}
 .small-note{font-size:.9rem;color:#B8C4DC}
 
 /* give */
@@ -198,6 +211,8 @@ footer a:hover{text-decoration:underline}
   .shelf{grid-template-columns:repeat(2,1fr)}
   .foot{grid-template-columns:1fr 1fr}
   form.signup{grid-template-columns:1fr}
+  .visit-form{grid-template-columns:1fr}
+  .brand-mark{height:40px}
   .photo{max-width:440px}
   .gift .cover{justify-self:center}
   .brand{font-size:1.25rem}

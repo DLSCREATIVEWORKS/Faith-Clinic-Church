@@ -12,6 +12,7 @@ export const site = {
   ltutp: 'https://www.amazon.com/dp/B0G3GP6KRM',
   transformation: 'https://www.amazon.com/dp/B0DRYR33HK',
   radio: 'Kingdom Keys Network, 88.3 FM in Amarillo',
+  newBelievers: 'https://newbelievers.faithclinicministries.org',
 }
 
 export const nav = [
@@ -20,6 +21,6 @@ export const nav = [
   { href: '/watch/', label: 'Watch' },
   { href: '/gatherings/', label: 'Gatherings' },
   { href: '/books/', label: 'Books' },
-  { href: '/new-believers/', label: 'New Believers' },
+  { href: 'https://newbelievers.faithclinicministries.org', label: 'New Believers' },
   { href: '/plan-your-visit/', label: 'Plan Your Visit' },
 ]

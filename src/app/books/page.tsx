@@ -53,12 +53,12 @@ export default function Books() {
               <h3>They Are Not Aliens</h3>
               <p>Spiritual warfare prayers and biblical teaching for believers in an era of UFO disclosure.</p>
             </div>
-            <Link className="book reveal" href="/new-believers/">
+            <a className="book reveal" href={site.newBelievers}>
               <div className="cover"><img src="/images/cover-new-believers.jpg" alt="Book cover: I Gave My Life to Jesus. Now What?" /></div>
               <p className="tag">Free ebook</p>
               <h3>I Gave My Life to Jesus. Now What?</h3>
               <p>A new believer&rsquo;s guide to knowing God, growing in faith, and living the Christian life.</p>
-            </Link>
+            </a>
           </div>
           <div className="cta">
             <a className="btn line" href={site.books}>Visit LifeBook Publishing</a>
