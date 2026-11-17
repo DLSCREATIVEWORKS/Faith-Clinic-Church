@@ -55,6 +55,10 @@ ul{margin:0;padding:0;list-style:none}
 .top nav a:not(.btn)::after{content:"";position:absolute;left:0;right:0;bottom:0;height:2px;background:var(--gold-bright);transform:scaleX(0);transform-origin:left;transition:transform .25s ease}
 .top nav a:not(.btn):hover::after,.top nav a:not(.btn):focus-visible::after{transform:scaleX(1)}
 
+.top nav a[aria-current="page"]:not(.btn)::after{transform:scaleX(1)}
+.menu-btn{display:none;font:600 1rem var(--body);color:#fff;background:transparent;border:1px solid rgba(255,255,255,.5);border-radius:var(--r);padding:8px 14px;cursor:pointer}
+button:disabled{opacity:.7;cursor:wait}
+
 /* home hero */
 .hero{position:relative;background:var(--navy-deep);color:#fff;overflow:hidden;isolation:isolate}
 .hero-photo{position:absolute;inset:0 0 0 34%;z-index:-2;overflow:hidden}
@@ -180,6 +184,12 @@ footer a:hover{text-decoration:underline}
 .legal{border-top:1px solid rgba(255,255,255,.14);margin-top:44px;padding-top:20px;padding-bottom:24px;font-size:.88rem}
 
 @media (max-width:900px){
+  .menu-btn{display:inline-flex;gap:8px;align-items:center}
+  .top nav{display:none;width:100%;flex-direction:column;align-items:stretch;gap:0;padding:6px 0 12px}
+  .top nav.open{display:flex}
+  .top nav a:not(.btn){padding:13px 2px;border-bottom:1px solid rgba(255,255,255,.12);font-size:1.05rem}
+  .top nav a:not(.btn)::after{display:none}
+  .top nav .btn{margin-top:14px}
   .hero-photo{inset:0}
   .hero::before{background:linear-gradient(180deg,rgba(14,30,61,.9) 0%,rgba(14,30,61,.82) 60%,rgba(14,30,61,.7) 100%)}
   .lamp{width:70%}

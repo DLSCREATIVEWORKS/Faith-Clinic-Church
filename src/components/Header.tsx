@@ -1,7 +1,15 @@
+'use client'
+
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
+import { useEffect, useState } from 'react'
 import { nav } from '@/lib'
 
 export default function Header() {
+  const [open, setOpen] = useState(false)
+  const pathname = usePathname()
+  useEffect(() => setOpen(false), [pathname])
+
   return (
     <header className="top">
       <div className="wrap">
@@ -12,9 +20,12 @@ export default function Header() {
           </svg>
           <span>Faith Clinic Church</span>
         </Link>
-        <nav aria-label="Main">
+        <button className="menu-btn" type="button" aria-expanded={open} aria-controls="site-nav" onClick={() => setOpen(!open)}>
+          <span aria-hidden="true">{open ? '✕' : '☰'}</span> Menu
+        </button>
+        <nav id="site-nav" aria-label="Main" className={open ? 'open' : ''}>
           {nav.map((n) => (
-            <Link key={n.href} href={n.href}>
+            <Link key={n.href} href={n.href} aria-current={pathname === n.href ? 'page' : undefined}>
               {n.label}
             </Link>
           ))}
