@@ -33,7 +33,7 @@ export default function NewBelievers() {
             <p>What happened to me when I gave my life to Jesus? How do I pray? How do I read the Bible? What do I do when I miss it?</p>
             <p>Dr. Simpson answers them in plain words, with encouragement and clear instructions for your first steps. You will also find where to connect: the church, the services, and resources to keep you growing.</p>
           </div>
-          <div className="photo reveal">
+          <div className="photo cover-shot reveal">
             <img src="/images/new-believers-devices.jpg" alt="The ebook shown on a tablet, laptop, phone and Kindle" />
           </div>
         </div>

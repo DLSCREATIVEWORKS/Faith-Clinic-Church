@@ -13,7 +13,7 @@ export default function Books() {
 
       <section>
         <div className="wrap split">
-          <div className="photo reveal" style={{ maxWidth: 340, justifySelf: 'center' }}>
+          <div className="photo cover-shot reveal" style={{ maxWidth: 340, justifySelf: 'center' }}>
             <img src="/images/cover-lord-teach-us-to-pray.jpg" alt="Book cover: Lord, Teach Us to Pray by Dr. Lee A. Simpson" />
           </div>
           <div className="prose reveal">
