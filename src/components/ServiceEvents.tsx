@@ -80,6 +80,11 @@ const place = {
   },
 }
 
+const performers = [
+  { '@type': 'Person', name: 'Dr. Lee A. Simpson' },
+  { '@type': 'Person', name: 'Pastor Pat Simpson' },
+]
+
 /* Google needs a real start date for each Event, so the next service dates are worked out
    when the page opens (Google runs this script when it reads the page). */
 export default function ServiceEvents() {
@@ -111,6 +116,14 @@ export default function ServiceEvents() {
           location: s.online ? [place, { '@type': 'VirtualLocation', url: site.youtube }] : place,
           image: `${siteUrl}/images/share.jpg`,
           isAccessibleForFree: true,
+          performer: performers,
+          offers: {
+            '@type': 'Offer',
+            price: 0,
+            priceCurrency: 'USD',
+            availability: 'https://schema.org/InStock',
+            url: `${siteUrl}/plan-your-visit/`,
+          },
           organizer: { '@type': 'Organization', name: site.name, url: siteUrl },
         },
       ]
