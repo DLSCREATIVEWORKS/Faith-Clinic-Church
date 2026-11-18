@@ -80,6 +80,9 @@ const place = {
   },
 }
 
+/* Services are always free; this is the date free entry was first listed for Google. */
+const FREE_SINCE = '2026-11-18T00:00:00-06:00'
+
 const performers = [
   { '@type': 'Person', name: 'Dr. Lee A. Simpson' },
   { '@type': 'Person', name: 'Pastor Pat Simpson' },
@@ -122,6 +125,7 @@ export default function ServiceEvents() {
             price: 0,
             priceCurrency: 'USD',
             availability: 'https://schema.org/InStock',
+            validFrom: FREE_SINCE,
             url: `${siteUrl}/plan-your-visit/`,
           },
           organizer: { '@type': 'Organization', name: site.name, url: siteUrl },
