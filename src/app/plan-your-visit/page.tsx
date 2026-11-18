@@ -23,7 +23,7 @@ export default function Visit() {
             <p>Our gatherings center on worship, biblical teaching, and prayer. There is no dress code. We want you to feel welcome and comfortable.</p>
             <dl className="info">
               <dt>Sunday</dt><dd>Worship at 11:00 AM Central, in person and online. Arrive a few minutes early.</dd>
-              <dt>Wednesday</dt><dd>Night Bible Study at 7:00 PM Central.</dd>
+              <dt>Wednesday</dt><dd>Night Bible Study at 7:00 PM Central, in person and online.</dd>
               <dt>Children</dt><dd>KingdomSpark serves infants through eighth grade. Families worship together on the first Sunday of each month. Ask our team when you arrive.</dd>
               <dt>Español</dt><dd>Spanish translation is available. Let our team know when you arrive.</dd>
               <dt>Parking</dt><dd>At the front, north, and south of the property.</dd>
