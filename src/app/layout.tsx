@@ -2,6 +2,7 @@ import type { ReactNode } from 'react'
 import Effects from '@/components/Effects'
 import Footer from '@/components/Footer'
 import Header from '@/components/Header'
+import ServiceEvents from '@/components/ServiceEvents'
 import './globals.css'
 import { site, siteUrl } from '@/lib'
 
@@ -48,22 +49,6 @@ const churchData = {
   },
   hasMap: site.maps,
   sameAs: [site.youtube, site.facebook],
-  event: [
-    {
-      '@type': 'Event',
-      name: 'Sunday Worship',
-      description: 'Sunday worship service at 11:00 AM Central, in person and online.',
-      eventSchedule: { '@type': 'Schedule', byDay: 'https://schema.org/Sunday', startTime: '11:00', scheduleTimezone: 'America/Chicago', repeatFrequency: 'P1W' },
-      location: { '@type': 'Place', name: 'Faith Clinic Church', address: '2000 North Polk Street, Amarillo, TX 79107' },
-    },
-    {
-      '@type': 'Event',
-      name: 'Wednesday Night Bible Study',
-      description: 'Wednesday Night Bible Study at 7:00 PM Central.',
-      eventSchedule: { '@type': 'Schedule', byDay: 'https://schema.org/Wednesday', startTime: '19:00', scheduleTimezone: 'America/Chicago', repeatFrequency: 'P1W' },
-      location: { '@type': 'Place', name: 'Faith Clinic Church', address: '2000 North Polk Street, Amarillo, TX 79107' },
-    },
-  ],
 }
 
 export default function RootLayout({ children }: { children: ReactNode }) {
@@ -84,6 +69,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         <main id="main">{children}</main>
         <Footer />
         <Effects />
+        <ServiceEvents />
       </body>
     </html>
   )
