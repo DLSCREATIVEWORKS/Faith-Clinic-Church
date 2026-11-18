@@ -8,7 +8,7 @@ export default function HomePage() {
     <>
       <div className="hero">
         <div className="hero-photo">
-          <img src="/images/hero-sanctuary.jpg" alt="An open Bible on the pulpit under a brass lamp, with the congregation worshiping behind it" />
+          <img src="/images/hero-worship.jpg" alt="A full sanctuary worshiping with raised hands and open Bibles, beside a pulpit with an open Bible under a brass lamp" />
         </div>
         <div className="lamp" aria-hidden="true" />
         <div className="wrap">
