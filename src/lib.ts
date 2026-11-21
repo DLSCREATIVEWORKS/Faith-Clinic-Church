@@ -14,8 +14,8 @@ export const site = {
   radio: 'Kingdom Keys Network, 88.3 FM in Amarillo',
   newBelievers: 'https://newbelievers.faithclinicministries.org',
   /* Dr. Simpson's Video To Blog publication. Change these two lines to switch blogs. */
-  blog: 'https://prayers-spiritual-warfare.videotoblog.ai',
-  blogFeed: 'https://prayers-spiritual-warfare.videotoblog.ai/rss',
+  blog: 'https://blog.faithclinicministries.org',
+  blogFeed: 'https://blog.faithclinicministries.org/rss',
 }
 
 export const nav = [
