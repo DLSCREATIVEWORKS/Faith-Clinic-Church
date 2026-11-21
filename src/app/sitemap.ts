@@ -2,7 +2,7 @@ import { siteUrl } from '@/lib'
 
 export const dynamic = 'force-static'
 
-const pages = ['/', '/plan-your-visit/', '/about/', '/gatherings/', '/ministries/', '/watch/', '/books/', '/new-believers/', '/request-prayer/', '/give/']
+const pages = ['/', '/plan-your-visit/', '/about/', '/gatherings/', '/ministries/', '/watch/', '/blog/', '/books/', '/new-believers/', '/request-prayer/', '/give/']
 
 export default function sitemap() {
   return pages.map((path) => ({

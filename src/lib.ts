@@ -13,12 +13,16 @@ export const site = {
   transformation: 'https://www.amazon.com/dp/B0DRYR33HK',
   radio: 'Kingdom Keys Network, 88.3 FM in Amarillo',
   newBelievers: 'https://newbelievers.faithclinicministries.org',
+  /* Dr. Simpson's Video To Blog publication. Change these two lines to switch blogs. */
+  blog: 'https://prayers-spiritual-warfare.videotoblog.ai',
+  blogFeed: 'https://prayers-spiritual-warfare.videotoblog.ai/rss',
 }
 
 export const nav = [
   { href: '/about/', label: 'Our Story' },
   { href: '/ministries/', label: 'Ministries' },
   { href: '/watch/', label: 'Watch' },
+  { href: '/blog/', label: 'Blog' },
   { href: '/gatherings/', label: 'Gatherings' },
   { href: '/books/', label: 'Books' },
   { href: 'https://newbelievers.faithclinicministries.org', label: 'New Believers' },

@@ -27,6 +27,7 @@ export default function Footer() {
           <h3>Stay connected</h3>
           <ul>
             <li><Link href="/watch/">Watch a message</Link></li>
+            <li><Link href="/blog/">Read the blog</Link></li>
             <li><Link href="/request-prayer/">Request prayer</Link></li>
             <li><Link href="/give/">Give</Link></li>
             <li><a href={site.maps}>Get directions</a></li>

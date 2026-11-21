@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { NextStep, Verse } from '@/components/Blocks'
+import BlogFeed from '@/components/BlogFeed'
 import Countdown from '@/components/Countdown'
 import { site } from '@/lib'
 
@@ -190,6 +191,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      <section className="alt">
+        <div className="wrap">
+          <div className="sec-head reveal">
+            <p className="eyebrow">From the blog</p>
+            <h2>Latest teachings from Dr. Simpson</h2>
+            <p>Read, reflect, and share the Word taught at Faith Clinic.</p>
+          </div>
+          <BlogFeed limit={3} />
+          <div className="cta center-cta">
+            <Link className="btn line" href="/blog/">See all teachings</Link>
+          </div>
+        </div>
+      </section>
       <NextStep />
     </>
   )
