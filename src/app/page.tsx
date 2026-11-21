@@ -15,6 +15,7 @@ export default function HomePage() {
         <div className="wrap">
           <p className="eyebrow rise">Faith Clinic Christian Center · Amarillo, Texas</p>
           <h1 className="rise d1">
+            <span className="sr-only">Faith Clinic Church (Faith Clinic Christian Center) in Amarillo, Texas: </span>
             Faith comes by <em>hearing.</em>
           </h1>
           <p className="lede rise d2">
