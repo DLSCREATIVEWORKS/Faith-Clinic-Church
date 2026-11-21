@@ -5,6 +5,49 @@ import VisitForm from '@/components/VisitForm'
 
 export const metadata = pageMeta('Plan Your Visit', "Plan your first visit to Faith Clinic Church in Amarillo, TX. Sunday worship 11:00 AM, Wednesday Bible Study 7:00 PM, children's ministry, Spanish translation, and easy parking.", '/plan-your-visit/')
 
+/* Common questions, written the way people ask them in Google, ChatGPT and Claude.
+   The same answers are given to search engines as FAQ data below. */
+const faqs = [
+  {
+    q: 'What time is church at Faith Clinic Church in Amarillo?',
+    a: 'Sunday worship is at 11:00 AM Central, and Wednesday Night Bible Study is at 7:00 PM Central. Both meet in person and online.',
+  },
+  {
+    q: 'Where is Faith Clinic Church?',
+    a: 'Faith Clinic Church is at 2000 North Polk Street, Amarillo, Texas 79107, just off the Dumas Highway (US 287). Parking is at the front, north, and south of the property.',
+  },
+  {
+    q: 'Is Faith Clinic a medical clinic?',
+    a: 'No. Faith Clinic Church, also known as Faith Clinic Christian Center, is a Christian church. The name comes from what we believe: the Word of God is the medicine for every area of life.',
+  },
+  {
+    q: 'Who is the pastor of Faith Clinic Church?',
+    a: 'Faith Clinic Church is led by Dr. Lee A. Simpson, Senior Pastor, and Pastor Pat Simpson.',
+  },
+  {
+    q: 'Is there a dress code?',
+    a: 'No. There is no dress code. Come as you are.',
+  },
+  {
+    q: 'Do you have a ministry for children?',
+    a: 'Yes. KingdomSpark serves infants through eighth grade. Families worship together on the first Sunday of each month.',
+  },
+  {
+    q: 'Is Spanish translation available?',
+    a: 'Yes. Spanish translation is available. Let our team know when you arrive.',
+  },
+  {
+    q: 'Can I watch Faith Clinic Church services online?',
+    a: 'Yes. Sunday services stream live at 11:00 AM Central on Facebook and YouTube. You can also hear Dr. Simpson on the Kingdom Keys Network, 88.3 FM in Amarillo.',
+  },
+]
+
+const faqData = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: faqs.map((f) => ({ '@type': 'Question', name: f.q, acceptedAnswer: { '@type': 'Answer', text: f.a } })),
+}
+
 export default function Visit() {
   return (
     <>
@@ -51,6 +94,21 @@ export default function Visit() {
             <VisitForm />
           </div>
         </div>
+      </section>
+      <section className="faq">
+        <div className="wrap narrow">
+          <div className="prose reveal">
+            <p className="eyebrow">Questions</p>
+            <h2>Questions people ask before they visit.</h2>
+            {faqs.map((f) => (
+              <div key={f.q}>
+                <h3>{f.q}</h3>
+                <p>{f.a}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqData) }} />
       </section>
       <NextStep />
     </>

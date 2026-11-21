@@ -51,6 +51,20 @@ const churchData = {
   sameAs: [site.youtube, site.facebook],
 }
 
+/* Tells search engines and AI assistants who the pastor is and links his public profiles. */
+const pastorData = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Lee A. Simpson',
+  honorificPrefix: 'Dr.',
+  jobTitle: 'Senior Pastor',
+  description:
+    'Dr. Lee A. Simpson is Senior Pastor of Faith Clinic Church (Faith Clinic Christian Center) in Amarillo, Texas, an author, and a Bible teacher heard on the Kingdom Keys Network, 88.3 FM.',
+  worksFor: { '@type': 'Organization', name: 'Faith Clinic Church', alternateName: 'Faith Clinic Crusaders Ministries', url: siteUrl },
+  url: `${siteUrl}/about/`,
+  sameAs: [site.facebook, site.youtube, site.books],
+}
+
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="en">
@@ -62,6 +76,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           rel="stylesheet"
         />
         <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(churchData) }} />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(pastorData) }} />
       </head>
       <body>
         <a className="skip" href="#main">Skip to content</a>
